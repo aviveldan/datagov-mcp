@@ -61,7 +61,7 @@ def main():
     # Prepare the initial message
     messages = [
         {"role": "system", "content": "You are a helpful assistant that can fetch data from the Israeli government public API."},
-        {"role": "user", "content": f"Can you find resource ID for the dataset flydata and then get data from there?"}
+        {"role": "user", "content": f"Can you find data from dataset antenna_hakama?"}
     ]
     
     # First, get the model's response
