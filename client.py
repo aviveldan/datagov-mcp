@@ -56,14 +56,12 @@ def main():
     
     # Start a conversation with the model
     print("\nStarting chat with OpenAI model...")
-    
-    # Define the resource ID to query
-    resource_id = "e83f763b-b7d7-479e-b172-ae981ddc6de5"
+
     
     # Prepare the initial message
     messages = [
         {"role": "system", "content": "You are a helpful assistant that can fetch data from the Israeli government public API."},
-        {"role": "user", "content": f"Can you fetch data for resource ID {resource_id}?"}
+        {"role": "user", "content": f"Can you find resource ID for the dataset flydata and then get data from there?"}
     ]
     
     # First, get the model's response
