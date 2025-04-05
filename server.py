@@ -5,11 +5,6 @@ import requests
 # Create an MCP server
 mcp = FastMCP("DataGovILServer")
 
-# Add a dynamic greeting resource
-@mcp.resource("greeting://{name}")
-def get_greeting(name: str) -> str:
-    """Get a personalized greeting"""
-    return f"Hello, {name}!"
 
 @mcp.tool()
 def fetch_data_gov_il(dataset_name: str, limit: int = 100, offset: int = 0):
