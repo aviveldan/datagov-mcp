@@ -1,5 +1,0 @@
-python-dotenv 
-openai 
-flask
-requests
-azure.identity
