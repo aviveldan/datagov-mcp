@@ -1,10 +1,9 @@
 # server.py
-
 from fastmcp import FastMCP
 import requests
 
 # Create an MCP server
-mcp = FastMCP("DataGovILServer", "0.0.1")
+mcp = FastMCP("DataGovILServer")
 
 # Add a dynamic greeting resource
 @mcp.resource("greeting://{name}")
