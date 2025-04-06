@@ -142,7 +142,30 @@ def fetch_data_gov_il(dataset_name: str, limit: int = 100, offset: int = 0):
 
 @mcp.tool()
 async def fetch_all_packages_metadata(ctx: Context, page: int = 1, page_size: int = 10):
-    """Fetch metadata for packages with paging support."""
+    """Fetch metadata for packages with paging support.
+
+    This function retrieves metadata for datasets (packages) from the Israeli government public API (data.gov.il) with support for paging.
+
+    Example:
+    Suppose there are 25 total packages available, and the user requests page=2 with page_size=10.
+    - Total packages: 25
+    - Page size: 10
+    - Page 2 will return packages with indices 10 to 19 (inclusive).
+
+    Parameters:
+    - ctx (Context): The context object for logging and progress reporting.
+    - page (int): The page number to fetch (1-based index).
+    - page_size (int): The number of packages to include in each page.
+
+    Returns:
+    - A dictionary containing:
+      - success (bool): Whether the operation was successful.
+      - packages (list): Metadata for the packages in the requested page.
+      - page (int): The current page number.
+      - page_size (int): The number of packages per page.
+      - total_packages (int): The total number of packages available.
+      - has_more (bool): Whether there are more pages available.
+    """
     try:
         # Step 1: Get the list of all package IDs
         package_ids_response = await package_list(ctx)
