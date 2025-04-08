@@ -17,27 +17,6 @@ Easily interact with the Israeli Government Public API (data.gov.il) using this 
    uv pip install -r pyproject.toml
    ```
 
-## Setup
-
-### Install `uv`
-
-The first step is to ensure `uv` is installed, as it is used to run the MCP server.
-
-For installation instructions, see the [`uv` installation docs](https://docs.astral.sh/uv/getting-started/installation/).
-
-If you already have an older version of `uv` installed, you might need to update it with `uv self update`.
-
-### Manually run the server
-
-Once you have `uv` installed, you can manually run the MCP server using `uvx` (which is provided by `uv`).
-
-```bash
-uvx server.py
-```
-
-> [!NOTE]  
-> If you are using Cursor, Claude Desktop, Cline, or other MCP clients that manage your MCP servers for you, you **_do NOT_** need to manually run the server yourself. The next section will show you how to configure these clients to make use of the DataGov Israel MCP server.
-
 
 ### Usage
 You can install this server in [Claude Desktop](https://claude.ai/download) and interact with it right away by running:
