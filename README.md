@@ -6,7 +6,6 @@ Easily interact with the Israeli Government Public API (data.gov.il) using this 
 
 ## Quick Start
 
-
 ### Installation
 1. Clone the repository:
    ```bash
@@ -18,6 +17,26 @@ Easily interact with the Israeli Government Public API (data.gov.il) using this 
    uv pip install -r pyproject.toml
    ```
 
+## Setup
+
+### Install `uv`
+
+The first step is to ensure `uv` is installed, as it is used to run the MCP server.
+
+For installation instructions, see the [`uv` installation docs](https://docs.astral.sh/uv/getting-started/installation/).
+
+If you already have an older version of `uv` installed, you might need to update it with `uv self update`.
+
+### Manually run the server
+
+Once you have `uv` installed, you can manually run the MCP server using `uvx` (which is provided by `uv`).
+
+```bash
+uvx server.py
+```
+
+> [!NOTE]  
+> If you are using Cursor, Claude Desktop, Cline, or other MCP clients that manage your MCP servers for you, you **_do NOT_** need to manually run the server yourself. The next section will show you how to configure these clients to make use of the DataGov Israel MCP server.
 
 
 ### Usage
@@ -30,3 +49,57 @@ Alternatively, you can test it with the MCP Inspector:
 ```bash
 fastmcp dev server.py
 ```
+
+## Available Tools
+
+* `status_show` - Display the current status of the server
+* `license_list` - List all available licenses
+* `package_list` - List all available packages
+* `package_search` - Search for packages with various filters
+  * Required arguments:
+    * `q` (string): Query string to search for
+    * `fq` (string): Filter query
+    * `sort` (string): Sorting order
+    * `rows` (int): Number of rows to return
+    * `start` (int): Starting index
+    * `include_private` (bool): Include private packages
+* `package_show` - Show details of a specific package
+  * Required arguments:
+    * `id` (string): ID of the package
+* `organization_list` - List all organizations
+* `organization_show` - Show details of a specific organization
+  * Required arguments:
+    * `id` (string): ID of the organization
+* `resource_search` - Search for resources with various filters
+  * Required arguments:
+    * `query` (string): Query string to search for
+    * `order_by` (string): Order by field
+    * `offset` (int): Offset for pagination
+    * `limit` (int): Limit for pagination
+* `datastore_search` - Search the datastore with various filters
+  * Required arguments:
+    * `resource_id` (string): ID of the resource
+    * `q` (string): Query string to search for
+    * `distinct` (bool): Return distinct results
+    * `plain` (bool): Return plain results
+    * `limit` (int): Limit for pagination
+    * `offset` (int): Offset for pagination
+    * `fields` (string): Fields to include in the result
+    * `sort` (string): Sorting order
+    * `include_total` (bool): Include total count
+    * `records_format` (string): Format of the records
+* `fetch_data_gov_il` - Fetch data from data.gov.il
+  * Required arguments:
+    * `dataset_name` (string): Name of the dataset
+    * `limit` (int): Number of records to fetch
+    * `offset` (int): Offset for pagination
+
+## Contributing
+
+We welcome contributions to help improve the DataGov Israel MCP server. Whether you want to add new tools, enhance existing functionality, or improve documentation, your input is valuable.
+
+For examples of other MCP servers and implementation patterns, see the [Model Context Protocol servers repository](https://github.com/modelcontextprotocol/servers).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
