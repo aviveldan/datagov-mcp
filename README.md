@@ -1,6 +1,6 @@
 # DataGov Israel MCP Server
 
-Easily interact with the Israeli Government Public API (data.gov.il) using this project, which combines a Flask-based MCP server and an OpenAI-integrated client to fetch and process data.
+Easily interact with the Israeli Government Public API (data.gov.il) using this project.
 
 ---
 
