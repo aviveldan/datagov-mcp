@@ -12,7 +12,6 @@ Easily interact with the Israeli Government Public API (data.gov.il) using this 
 This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-in replacement to pip.
 
 ### Installation
-
 1. Clone the repository:
    ```bash
    git clone <repository-url>
