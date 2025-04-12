@@ -6,6 +6,11 @@ Easily interact with the Israeli Government Public API (data.gov.il) using this 
 
 ## Quick Start
 
+### Requirements
+
+#### uv
+This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-in replacement to pip.
+
 ### Installation
 1. Clone the repository:
    ```bash
@@ -14,9 +19,10 @@ Easily interact with the Israeli Government Public API (data.gov.il) using this 
    ```
 2. Install dependencies:
    ```bash
+   uv venv
    uv pip install -r pyproject.toml
    ```
-
+   
 
 ### Usage
 You can install this server in [Claude Desktop](https://claude.ai/download) and interact with it right away by running:
