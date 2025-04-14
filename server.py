@@ -139,3 +139,7 @@ def fetch_data_gov_il(dataset_name: str, limit: int = 100, offset: int = 0):
         return api_data["result"]["records"]
     else:
         raise Exception(api_data.get("error", "Unknown error occurred"))
+    
+if __name__ == "__main__":
+    # This code only runs when the file is executed directly
+    mcp.run()
