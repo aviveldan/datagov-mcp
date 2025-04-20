@@ -37,7 +37,10 @@ async def package_list(ctx: Context):
 
 
 @mcp.tool()
-async def package_search(ctx: Context, q: str = "", fq: str = "", sort: str = "", rows: int = 20, start: int = 0, include_private: bool = False):
+async def package_search(ctx: Context, q: str = "", fq: str = "",
+                         sort: str = "", rows: int = 20, start: int = 0,
+                         include_private: bool = False):
+
     """Find packages (datasets) matching query terms."""
     await ctx.info("Searching for packages...")
     params = {
@@ -77,13 +80,15 @@ async def organization_show(ctx: Context, id: str):
     """Get details of a specific organization."""
     await ctx.info(f"Fetching details for organization: {id}")
     params = {"id": id}
-    response = requests.get(f"{BASE_URL}/action/organization_show", params=params)
+    response = requests.get(f"{BASE_URL}/action/organization_show",
+                            params=params)
     response.raise_for_status()
     return response.json()
 
 
 @mcp.tool()
-async def resource_search(ctx: Context, query: str = "", order_by: str = "", offset: int = 0, limit: int = 100):
+async def resource_search(ctx: Context, query: str = "", order_by: str = "",
+                          offset: int = 0, limit: int = 100):
     """Find resources based on their field values."""
     await ctx.info("Searching for resources...")
     params = {
@@ -98,7 +103,11 @@ async def resource_search(ctx: Context, query: str = "", order_by: str = "", off
 
 
 @mcp.tool()
-async def datastore_search(ctx: Context, resource_id: str, q: str = "", distinct: bool = False, plain: bool = True, limit: int = 100, offset: int = 0, fields: str = "", sort: str = "", include_total: bool = True, records_format: str = "objects"):
+async def datastore_search(ctx: Context, resource_id: str, q: str = "",
+                           distinct: bool = False, plain: bool = True,
+                           limit: int = 100, offset: int = 0, fields: str = "",
+                           sort: str = "", include_total: bool = True,
+                           records_format: str = "objects"):
     """Search a datastore resource."""
     await ctx.info(f"Searching datastore for resource: {resource_id}")
     params = {
@@ -119,10 +128,10 @@ async def datastore_search(ctx: Context, resource_id: str, q: str = "", distinct
 
 
 @mcp.tool()
-def fetch_data_gov_il(dataset_name: str, limit: int = 100, offset: int = 0):
-    """Fetch data from the Israeli government public API (data.gov.il) based on a dataset name query"""
+def fetch_data(dataset_name: str, limit: int = 100, offset: int = 0):
+    """Fetch data from public API based on a dataset name query"""
     def find_resource_id(dataset_name):
-        dataset_url = f"https://data.gov.il/api/3/action/package_show?id={dataset_name}"
+        dataset_url = f"{BASE_URL}/action/package_show?id={dataset_name}"
         response = requests.get(dataset_url)
         if response.status_code == 200:
             dataset_data = response.json()
@@ -135,7 +144,7 @@ def fetch_data_gov_il(dataset_name: str, limit: int = 100, offset: int = 0):
     if not resource_id:
         return {"error": f"No dataset found matching '{dataset_name}'"}
 
-    base_url = "https://data.gov.il/api/3/action/datastore_search"
+    base_url = f"{BASE_URL}/action/datastore_search"
     params = {
         "resource_id": resource_id,
         "limit": limit,
