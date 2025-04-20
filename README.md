@@ -20,7 +20,9 @@ This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-i
 2. Install dependencies:
    ```bash
    uv venv
+   .venv\Scripts\activate  # source .venv/bin/activate for MacOS / Linux
    uv pip install -r pyproject.toml
+   uv lock # update the project's lockfile
    ```
    
 
