@@ -20,7 +20,9 @@ This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-i
 2. Install dependencies:
    ```bash
    uv venv
+   .venv\Scripts\activate  # source .venv/bin/activate for MacOS / Linux
    uv pip install -r pyproject.toml
+   uv lock # update the project's lockfile
    ```
    
 
@@ -73,7 +75,7 @@ fastmcp dev server.py
     * `sort` (string): Sorting order
     * `include_total` (bool): Include total count
     * `records_format` (string): Format of the records
-* `fetch_data_gov_il` - Fetch data from data.gov.il
+* `fetch_data` - Fetch data from public API based on a dataset name query
   * Required arguments:
     * `dataset_name` (string): Name of the dataset
     * `limit` (int): Number of records to fetch
