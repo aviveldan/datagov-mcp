@@ -36,6 +36,11 @@ Alternatively, you can test it with the MCP Inspector:
 ```bash
 fastmcp dev server.py
 ```
+Note: if ports are busy, you may want to release them easily running this script: 
+
+```bash
+python ./utils/release_ports.py  # python3 ... (MacOS / Linux)  
+```
 
 ## Available Tools
 
