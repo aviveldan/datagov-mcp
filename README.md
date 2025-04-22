@@ -17,7 +17,7 @@ This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-i
    git clone <repository-url>
    cd datagov-mcp
    ```
-2. Install dependencies:
+2. Install dependencies (for windows users - [refrain from running this script in folders watched by onedrive](https://github.com/astral-sh/uv/issues/7906)):
    ```bash
    uv venv
    .venv\Scripts\activate  # source .venv/bin/activate for MacOS / Linux
