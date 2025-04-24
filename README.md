@@ -38,13 +38,9 @@ fastmcp dev server.py
 ```
 Note: if ports are busy, you may want to release them easily running this script: 
 
-```bash
-uv pip install -i https://test.pypi.org/simple/ nano-dev-utils-yaronday==0.2.1
-```
-
 ```python 
-from nano_dev_utils_yaronday import release_ports
-pr = release_ports.PortsRelease()
+import nano_dev_utils as ndu
+pr = ndu.release_ports.PortsRelease()
 pr.release_all()
 ```
 

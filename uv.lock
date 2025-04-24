@@ -123,12 +123,14 @@ version = "0.2.1"
 source = { virtual = "." }
 dependencies = [
     { name = "fastmcp" },
+    { name = "nano-dev-utils" },
     { name = "requests" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "fastmcp", specifier = ">=2.1.1" },
+    { name = "nano-dev-utils", specifier = ">=0.2.1" },
     { name = "requests", specifier = ">=2.32.3" },
 ]
 
@@ -264,6 +266,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
+]
+
+[[package]]
+name = "nano-dev-utils"
+version = "0.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6b/e1/f80b2128c6519bea75c8b06aafabd633b17c97ec0dbdca55f5bb92d839e9/nano_dev_utils-0.2.1.tar.gz", hash = "sha256:bbf4fb517b335edf4cf75da4716e2d0e96e5ed0521a7dce401fd5447bf43f70b", size = 11222 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/82/89/f24a76d62abd5c9cf9197762618a0a732877f61057036e437adcc6094eba/nano_dev_utils-0.2.1-py3-none-any.whl", hash = "sha256:51ad7e0e34fc82d6dbe58a8c5c1ef4a7c997a72cdc6b3ebdd01d01da0a66376e", size = 6736 },
 ]
 
 [[package]]
