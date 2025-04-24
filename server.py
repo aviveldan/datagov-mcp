@@ -3,7 +3,7 @@ from fastmcp import FastMCP, Context
 import requests
 
 # Create an MCP server
-mcp = FastMCP("DataGovIL")
+mcp = FastMCP("DataGovIL", dependencies=["requests"])
 
 # Base URL for the API
 BASE_URL = "https://data.gov.il/api/3"
