@@ -37,6 +37,19 @@ Alternatively, you can test it with the MCP Inspector:
 fastmcp dev server.py
 ```
 
+If client / server ports are busy, you can easily free them using [nano-dev-utils](https://pypi.org/project/nano-dev-utils/):
+```bash
+uv pip install nano-dev-utils
+```
+in terminal type 'python', and then run the following code:
+
+```python
+from nano_dev_utils import release_ports 
+pr = release_ports.PortsRelease()
+pr.release_all()
+```
+type exit() to get back to terminal. Alternatively run the above code as a script. 
+
 ## Available Tools
 
 * `status_show` - Display the current status of the server
