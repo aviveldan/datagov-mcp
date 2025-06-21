@@ -17,10 +17,12 @@ This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-i
    git clone <repository-url>
    cd datagov-mcp
    ```
-2. Install dependencies:
+2. Install dependencies (for windows users - [refrain from running this script in folders watched by onedrive](https://github.com/astral-sh/uv/issues/7906)):
    ```bash
    uv venv
+   .venv\Scripts\activate  # source .venv/bin/activate for MacOS / Linux
    uv pip install -r pyproject.toml
+   uv lock # update the project's lockfile
    ```
    
 
@@ -34,6 +36,19 @@ Alternatively, you can test it with the MCP Inspector:
 ```bash
 fastmcp dev server.py
 ```
+
+If client / server ports are busy, you can easily free them using [nano-dev-utils](https://pypi.org/project/nano-dev-utils/):
+```bash
+uv pip install nano-dev-utils
+```
+in terminal type 'python', and then run the following code:
+
+```python
+from nano_dev_utils import release_ports 
+pr = release_ports.PortsRelease()
+pr.release_all()
+```
+type exit() to get back to terminal. Alternatively run the above code as a script. 
 
 ## Available Tools
 
@@ -73,7 +88,7 @@ fastmcp dev server.py
     * `sort` (string): Sorting order
     * `include_total` (bool): Include total count
     * `records_format` (string): Format of the records
-* `fetch_data_gov_il` - Fetch data from data.gov.il
+* `fetch_data` - Fetch data from public API based on a dataset name query
   * Required arguments:
     * `dataset_name` (string): Name of the dataset
     * `limit` (int): Number of records to fetch
