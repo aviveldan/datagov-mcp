@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/aviveldan-datagov-mcp-badge.png)](https://mseep.ai/app/aviveldan-datagov-mcp)
+
 # DataGov Israel MCP Server
 
 Easily interact with the Israeli Government Public API (data.gov.il) using this project.
