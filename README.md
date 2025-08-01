@@ -29,7 +29,7 @@ This project uses the [uv](https://docs.astral.sh/uv/) package manager, a drop-i
 ### Usage
 You can install this server in [Claude Desktop](https://claude.ai/download) and interact with it right away by running:
 ```bash
-fastmcp install server.py
+fastmcp install claude desktop server.py
 ```
 
 Alternatively, you can test it with the MCP Inspector:
