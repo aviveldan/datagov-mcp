@@ -94,6 +94,38 @@ type exit() to get back to terminal. Alternatively run the above code as a scrip
     * `limit` (int): Number of records to fetch
     * `offset` (int): Offset for pagination
 
+## Available Prompts
+
+The server now includes guided prompts that help users work more effectively with Israeli government data:
+
+* `discover_datasets` - Guide users through discovering relevant datasets based on topic of interest
+  * Required arguments:
+    * `topic` (string): Main topic or domain of interest (e.g., "education", "health", "transportation")
+    * `organization` (string, optional): Specific organization to focus on (e.g., "משרד החינוך")
+  
+* `analyze_dataset_workflow` - Comprehensive workflow for analyzing a specific dataset
+  * Required arguments:
+    * `dataset_id` (string): ID or name of the dataset to analyze
+    * `analysis_goal` (string, optional): Analysis objective ("trend analysis", "comparison", "general exploration", "statistical analysis")
+
+* `explore_organization_data` - Guide for exploring all datasets from a specific government organization
+  * Required arguments:
+    * `organization_name` (string, optional): Name of organization to explore (Hebrew or English)
+
+* `search_optimization_guide` - Optimization guide for creating effective search queries
+  * Required arguments:
+    * `search_objective` (string, optional): Type of search ("specific dataset", "topic exploration", "recent data", "api data")
+
+### Using Prompts
+
+These prompts provide structured guidance and can be used with MCP-compatible clients like Claude Desktop. Each prompt generates a detailed workflow with specific tool recommendations and parameter suggestions tailored to working with Israeli government data.
+
+Example usage scenarios:
+- **Data Discovery**: Use `discover_datasets` with topic "חינוך" to find all education-related datasets
+- **Dataset Analysis**: Use `analyze_dataset_workflow` with a specific dataset ID to get a complete analysis workflow
+- **Organization Exploration**: Use `explore_organization_data` with "משרד הבריאות" to explore all health ministry data
+- **Search Optimization**: Use `search_optimization_guide` to learn advanced search techniques
+
 ## Contributing
 
 We welcome contributions to help improve the DataGov Israel MCP server. Whether you want to add new tools, enhance existing functionality, or improve documentation, your input is valuable.
