@@ -2,6 +2,10 @@
 
 Easily interact with the Israeli Government Public API (data.gov.il) using this project.
 
+<a href="https://glama.ai/mcp/servers/@aviveldan/datagov-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@aviveldan/datagov-mcp/badge" alt="Datagov Israel MCP server" />
+</a>
+
 ---
 
 ## Quick Start
