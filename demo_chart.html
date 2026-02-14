@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script type="text/javascript">
+    var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json", "title": "Israeli Cities Population", "data": {"values": [{"city": "Tel Aviv", "population": 460000}, {"city": "Jerusalem", "population": 936000}, {"city": "Haifa", "population": 285000}, {"city": "Beersheba", "population": 209000}]}, "width": 600, "height": 400, "mark": "bar", "encoding": {"x": {"field": "city", "title": "city"}, "y": {"field": "population", "type": "quantitative", "title": "population"}}};
+    vegaEmbed('#vis', spec);
+  </script>
+</body>
+</html>
