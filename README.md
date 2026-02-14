@@ -49,7 +49,7 @@ uv pip install -e ".[dev]"
 Install the server directly into Claude Desktop:
 
 ```bash
-fastmcp install claude desktop server.py
+fastmcp install claude-desktop server.py
 ```
 
 Then restart Claude Desktop and you'll see the DataGovIL tools available!
