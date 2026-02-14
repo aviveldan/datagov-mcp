@@ -2,7 +2,6 @@
 
 import pytest
 import respx
-from fastmcp import Context
 from httpx import Response
 
 from datagov_mcp.api import BASE_URL

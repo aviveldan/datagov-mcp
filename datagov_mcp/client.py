@@ -1,7 +1,7 @@
 """HTTP client lifecycle management for CKAN API requests."""
 
+from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
-from typing import AsyncIterator
 
 import httpx
 

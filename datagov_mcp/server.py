@@ -1,8 +1,8 @@
 """Main MCP server implementation with CKAN tools."""
 
-from fastmcp import FastMCP, Context
+from fastmcp import Context, FastMCP
 
-from datagov_mcp.api import ckan_api_call, CKANAPIError
+from datagov_mcp.api import CKANAPIError, ckan_api_call
 
 # Create an MCP server
 mcp = FastMCP("DataGovIL")

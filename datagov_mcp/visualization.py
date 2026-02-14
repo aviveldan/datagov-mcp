@@ -33,8 +33,7 @@ def infer_field_type(values: list[Any]) -> str:
     # Check for lat/lon patterns
     sample_str = str(non_null[0]).lower()
     if any(
-        keyword in sample_str
-        for keyword in ["lat", "latitude", "lng", "lon", "longitude", "coord"]
+        keyword in sample_str for keyword in ["lat", "latitude", "lng", "lon", "longitude", "coord"]
     ):
         return "coordinate"
 
@@ -294,7 +293,9 @@ async def map_generator(
                     feature = {
                         "type": "Feature",
                         "geometry": {"type": "Point", "coordinates": [lon, lat]},
-                        "properties": {k: v for k, v in record.items() if k not in [lat_field, lon_field]},
+                        "properties": {
+                            k: v for k, v in record.items() if k not in [lat_field, lon_field]
+                        },
                     }
                     features.append(feature)
             except (ValueError, TypeError):
