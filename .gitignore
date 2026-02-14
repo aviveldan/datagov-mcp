@@ -2,3 +2,12 @@
 .venv/
 __pycache__/
 *.egg-info/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg
+.ruff_cache/
+.DS_Store
