@@ -8,6 +8,25 @@ A Model Context Protocol (MCP) server for interacting with the Israeli Governmen
 
 ---
 
+## Screenshots
+
+### MCP Inspector Interface
+Test and explore all available tools using the MCP Inspector:
+
+![MCP Inspector Interface](screenshots/inspector-interface.png)
+
+### Available Tools
+Browse all 13 tools including CKAN API endpoints and visualization generators:
+
+![Tools List](screenshots/tools-list.png)
+
+### Visualization Tools in Action
+Generate interactive charts and maps from Israeli government datasets:
+
+![Visualization Examples](screenshots/visualization-examples.png)
+
+---
+
 ## Features
 
 - ✅ **Async I/O**: True async operations with httpx for optimal performance
