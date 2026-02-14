@@ -20,6 +20,11 @@ Browse all 13 tools including CKAN API endpoints and visualization generators:
 
 ![Tools List](screenshots/tools-list.png)
 
+### Visualization Tools in Action
+Generate interactive charts and maps from Israeli government datasets:
+
+![Visualization Examples](screenshots/visualization-examples.png)
+
 ---
 
 ## Features
