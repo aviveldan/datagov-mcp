@@ -7,6 +7,9 @@ from datagov_mcp.api import ckan_api_call, CKANAPIError
 # Create an MCP server
 mcp = FastMCP("DataGovIL")
 
+# Import visualization tools to register them
+from datagov_mcp import visualization  # noqa: E402, F401
+
 
 @mcp.tool()
 async def status_show(ctx: Context) -> dict:
