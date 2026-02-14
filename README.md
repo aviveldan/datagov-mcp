@@ -13,12 +13,12 @@ A Model Context Protocol (MCP) server for interacting with the Israeli Governmen
 ### MCP Inspector Interface
 Test and explore all available tools using the MCP Inspector:
 
-![MCP Inspector Interface](https://github.com/user-attachments/assets/03b675e3-0602-4937-9d09-1569766ce4b8)
+![MCP Inspector Interface](screenshots/inspector-interface.png)
 
 ### Available Tools
 Browse all 13 tools including CKAN API endpoints and visualization generators:
 
-![Tools List](https://github.com/user-attachments/assets/f78e6233-96dd-4d17-bea2-b567bf986c3b)
+![Tools List](screenshots/tools-list.png)
 
 ---
 
