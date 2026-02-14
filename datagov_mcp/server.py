@@ -5,7 +5,7 @@ from fastmcp import FastMCP, Context
 from datagov_mcp.api import ckan_api_call, CKANAPIError
 
 # Create an MCP server
-mcp = FastMCP("DataGovIL", dependencies=["httpx"])
+mcp = FastMCP("DataGovIL")
 
 
 @mcp.tool()
